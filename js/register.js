@@ -79,7 +79,7 @@ $(document).ready(function () {
   $("#btn-register").click(function (e) {
     var jsonData = [];
 
-    if ($("#password").val() == $("#rewritepassword").val()) {
+    if ($("#password").val() == $("#rewritepassword").val() && $("#password").val() != "") {
       if (localStorage.getItem("users") == null) {
         jsonData.push({
           username: $("#username").val(),
@@ -132,5 +132,7 @@ $(document).ready(function () {
     } else {
       alert("check the two password please");
     }
+
+
   });
 });
